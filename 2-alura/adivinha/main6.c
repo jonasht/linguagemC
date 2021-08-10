@@ -11,7 +11,10 @@ int main()
     printf("|  =================================  | \n");
     printf("======================================='\n");
 
-    int numeroParaAdivinhar = 20;
+    int numeroGrade = rand();
+
+
+    int numeroParaAdivinhar = numeroGrade % 100;
     int numero;
     int i = 1;
     double pontos = 0;
@@ -24,6 +27,7 @@ int main()
 
         printf("tentativa %d \nchute: ", i);
         scanf("%d", &numero);
+
         i++;
         if (numero < 0){
             printf("o numero digitado nao pode ser negataivo\n");
@@ -43,10 +47,14 @@ int main()
             printf("numero eh menor\n");
         }
 
-        double pontosPerdidos = (numero - numeroParaAdivinhar) / 2.0;
+        double pontosPerdidos = (double)(numero - numeroParaAdivinhar) / (double)2.0;
+        if(pontosPerdidos < 0){
+            pontosPerdidos = pontosPerdidos * -1;
+        }
+
         pontos = pontos - pontosPerdidos;
     }
     printf("fim de jogo\n");
-    printf("foi acertado: %d", i);
+    printf("foi acertado: %d\n", i);
     printf("total de pontos: %.f\n", pontos);
 }
