@@ -1,24 +1,16 @@
 #include <stdio.h>
 
-
-void calcular(int* c){
-    printf("\n  calcular c:%d endereco:%d\n", (*c), c);
-    (*c)++;
-    printf("  calcular c:%d endereco:%d\n", (*c), c);
-
+void calcula(int* c2) {
+	//printf("calcula %d %d", c, &c);
+	printf("calcula %d %d\n", (*c2), c2);
+	(*c2)++;
+	printf("calcula %d %d\n", (*c2), c2);
 }
 
-int main(){
-    printf("============================================\n");
-    printf("\tPONTEIRO\n");
-    printf("============================================\n");
+int main() {
+	int c = 10;
 
-
-    int c = 10;
-
-    printf("main c:%d ende:%d\n", c, &c);
-    calcular(&c);
-    printf("main c:%d endereco:%d\n", c, &c);
-    printf("============================================\n");
-
+	printf("main %d %d\n", c, &c);
+	calcula(&c);
+	printf("main %d %d\n", c, &c);
 }

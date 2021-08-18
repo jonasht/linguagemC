@@ -40,12 +40,11 @@ int ganhou() {
 }
 
 
-void abertura(){
-    printf("**************************************\n");
-    printf("*********   JOGO DA FORCA  ***********\n");
-    printf("**************************************\n");
+void abertura() {
+    printf("/****************/\n");
+    printf("/ Jogo de Forca */\n");
+    printf("/****************/\n\n");
 }
-
 
 void chuta() {
     char chute;
